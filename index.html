@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles-min.css" />
+    <title>Super English Col </title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">SEC</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="./index.html">Inicio</a></li>
+        <li><a href="#traductor">Traductor</a></li>
+        <li><a href="#quiz">Quiz</a></li>
+      </ul>
+      <div class="nav__btns">
+        
+      </div>
+    </nav>
+    <div class="container">
+      <div class="container__left">
+        <h1>Bienvenido nuevamente 😁</h1>
+      </div>
+      <div class="container__right">
+        <div class="images">
+            <img src="assets/senalogo.png" alt="sena logo" class="tent-2" />
+        </div>
+        <div class="content">
+         
+          <h2>¿Estas listo?</h2>
+          <h3>Super English Col te propone un reto</h3>
+          <p>
+            visita el apartado de quiz para ponerte un reto de ingles, ¿cuantas preguntas eres
+            capaz de responder sin fallar?, ¿Romperas el record?, si necesitas ayuda puedes usar nuestra herramienta de traduccion, visita el 
+            apartado Traductor
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-2" id="traductor"></div>
+      <div class="wrapper">
+        <div class="text-input">
+          <textarea spellcheck="false" class="from-text" placeholder="Ingresa el texto a traducir"></textarea>
+          <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Traducción"></textarea>
+        </div>
+        <ul class="controls">
+          <li class="row from">
+            <div class="icons">
+              <i id="from" class="fas fa-volume-up"></i>
+              <i id="from" class="fas fa-copy"></i>
+            </div>
+            <select></select>
+          </li>
+          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+          <li class="row to">
+            <select></select>
+            <div class="icons">
+              <i id="to" class="fas fa-volume-up"></i>
+              <i id="to" class="fas fa-copy"></i>
+            </div>
+          </li>
+        </ul>
+        <button class="traducir">Traducir el Texto</button>
+      </div>
+      
+    </div>
+    <div id="intro-container">
+      <span id="quiz"></span>
+      <h1 class="txt-quiz">SuperEnglishCol Quiz</h1>
+      <p class="txt-quiz">
+          Este es un proyecto del SENA dedicado a enseñar inglés de manera interactiva. SuperEnglishCol es una iniciativa educativa diseñada para mejorar el aprendizaje de lenguas extranjeras entre los estudiantes de primaria. Este proyecto ha sido desarrollado por <strong>Dana Sofia</strong> y <strong>Gabriel Avila</strong>, quienes están comprometidos con brindar herramientas interactivas y efectivas para la educación.
+      </p>
+      <p class="txt-quiz">
+          Nuestro objetivo es preparar a los estudiantes de una manera divertida y educativa para la prueba ICFES, con preguntas adaptadas específicamente para niños de primaria. ¡Esperamos que disfrutes aprendiendo con nosotros!
+      </p>
+      <img src="./assets/senalogo.png" alt="Logo del SENA" class="sena-logo">
+      <button id="startQuiz" class="interactive-button">Comenzar el Cuestionario</button>
+  </div>
+
+  <div id="quiz-container" style="display: none;">
+      <h2 class="txt-quiz">SuperEnglishCol</h2>
+      <p id="question"></p>
+      <input type="text" id="answer" placeholder="Escribe tu respuesta aquí..." autocomplete="off">
+      <div>
+          <button id="checkAnswer" class="interactive-button">Verificar Respuesta</button>
+          <button id="nextQuestion" class="interactive-button" disabled>Siguiente Pregunta</button>
+      </div>
+      <p id="feedback"></p>
+  </div>
+
+  <div id="final-score" style="display: none;">
+      <h2 class="txt-quiz">¡Cuestionario Completado!</h2>
+      <p class="txt-quiz">Tu puntuación final es: <span id="score"></span>/10</p>
+      <button id="restartQuiz" class="interactive-button">Reiniciar Cuestionario</button>
+  </div>
+
+  <audio id="correctSound" src="correct.mp3"></audio>
+  <audio id="incorrectSound" src="incorrect.mp3"></audio>
+
+    <script src="js/countries.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
