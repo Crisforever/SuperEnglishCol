@@ -32,18 +32,23 @@ a {
 }
 
 body {
-  width: 100vw;
-  
-  
-  
- 
+  max-width: 100%;
+  min-width: none;
+  width: none; 
+
   scroll-behavior: smooth;
+
+  display: grid;
+  
+  
 }
 
 nav {
   position: fixed;
   isolation: isolate;
+  max-width: 100%;
   width: 100%;
+  min-width: none;
   z-index: 9;
 }
 
