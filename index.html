@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <link rel="stylesheet" href="./styles.css" />
     <title>Super English Col </title>
   </head>
@@ -52,39 +59,87 @@
     </div>
 
     <section>
-    <div class="introduction-quiz-1" id="traductor">
-      <h1>Te presentamos nuestra herramienta !</h1>
-      <p>Supera nuestro reto el cual consta de un quiz de preguntas, en donde pondras
-        a prueba tus habilidades en traduccion de ingles a español y biceversa
-      </p>
+    <div class="mode">
+      <label class="toggle" for="dark-mode-btn">
+        <div class="toggle-track">
+          <input type="checkbox" class="toggle-checkbox" id="dark-mode-btn" />
+          <span class="toggle-thumb"></span>
+          <img src="images/sun.png" alt="" />
+          <img src="images/moon.png" alt="" />
+        </div>
+      </label>
     </div>
-
-  <div class="container-2" ></div>
-  <div class="wrapper">
-    <div class="text-input">
-      <textarea spellcheck="false" class="from-text" placeholder="Ingresa el texto a traducir"></textarea>
-      <textarea spellcheck="false" readonly disabled class="to-text" placeholder="Traducción"></textarea>
-    </div>
-    <ul class="controls">
-      <li class="row from">
-        <div class="icons">
-          <i id="from" class="fas fa-volume-up"></i>
-          <i id="from" class="fas fa-copy"></i>
+    <div class="container">
+      <div class="card input-wrapper">
+        <div class="from">
+          <span class="heading">From :</span>
+          <div class="dropdown-container" id="input-language">
+            <div class="dropdown-toggle">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span class="selected" data-value="auto">Auto Detect</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
-            <select></select>
-          </li>
-          <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
-          <li class="row to">
-            <select></select>
-            <div class="icons">
-              <i id="to" class="fas fa-volume-up"></i>
-              <i id="to" class="fas fa-copy"></i>
-            </div>
-          </li>
-        </ul>
-        <button class="traducir">Traducir el Texto</button>
+            <ul class="dropdown-menu">
+              <li class="option active">DropDown Menu Item 1</li>
+              <li class="option">DropDown Menu Item 2</li>
+            </ul>
+          </div>
+        </div>
+        <div class="text-area">
+          <textarea
+            id="input-text"
+            cols="30"
+            rows="10"
+            placeholder="Enter your text here"
+          ></textarea>
+          <div class="chars"><span id="input-chars">0</span> / 5000</div>
+        </div>
+        <div class="card-bottom">
+          <p>Or choose your document!</p>
+          <label for="upload-document">
+            <span id="upload-title">Choose File</span>
+            <ion-icon name="cloud-upload-outline"></ion-icon>
+            <input type="file" id="upload-document" hidden />
+          </label>
+        </div>
       </div>
-      
+
+      <div class="center">
+        <div class="swap-position">
+          <ion-icon name="swap-horizontal-outline"></ion-icon>
+        </div>
+      </div>
+
+      <div class="card output-wrapper">
+        <div class="to">
+          <span class="heading">To :</span>
+          <div class="dropdown-container" id="output-language">
+            <div class="dropdown-toggle">
+              <ion-icon name="globe-outline"></ion-icon>
+              <span class="selected" data-value="en">Englsih</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <ul class="dropdown-menu">
+              <li class="option active">DropDown Menu Item 1</li>
+              <li class="option">DropDown Menu Item 2</li>
+            </ul>
+          </div>
+        </div>
+        <textarea
+          id="output-text"
+          cols="30"
+          rows="10"
+          placeholder="Translated text will appear here"
+          disabled
+        ></textarea>
+        <div class="card-bottom">
+          <p>Download as a document!</p>
+          <button id="download-btn">
+            <span>Download</span>
+            <ion-icon name="cloud-download-outline"></ion-icon>
+          </button>
+        </div>
+      </div>
     </div>
   </section>
     
@@ -134,7 +189,7 @@
   <p>Queridos visitantes, queremos agradecerles sinceramente por ser parte de nuestra comunidad; su apoyo y participación han hecho de este espacio algo especial. Aunque nos despedimos por ahora, esperamos que nuestras memorias y aprendizajes los acompañen siempre. ¡Hasta pronto! Dana y Gabriel.</p>
 </div>
 
-  <script src="js/countries.js"></script>
+  <script src="js/languages.js"></script>
   <script src="js/script.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="main.js"></script>
